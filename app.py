@@ -14,7 +14,7 @@ def main():
 
     # 結果を表示
     for date in week_dates:
-        st.write(date)
+        st.text(date)
     
     
 def get_week_dates(start_date):
