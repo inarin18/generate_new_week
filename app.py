@@ -6,8 +6,6 @@ def main():
     
     st.title("週間日付表示", "rainbow")
     
-    
-    
     # 開始日を設定
     start_date = st.date_input("開始日を入力してください", datetime.date(2021, 1, 31))
 
