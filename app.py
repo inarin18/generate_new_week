@@ -7,14 +7,17 @@ def main():
     st.title("週間日付表示", "rainbow")
     
     # 開始日を設定
-    start_date = st.date_input("開始日を入力してください", datetime.date(2021, 1, 31))
+    start_date = st.date_input("開始日を入力してください", datetime.date(2024, 1, 31))
 
     # 週の日付を取得
     week_dates = get_week_dates(start_date)
 
-    # 結果を表示
+    # 結果を cat
+    date_str = ""
     for date in week_dates:
-        st.text(date)
+        date_str += date + "\n"
+        
+    st.code(date_str, language="python")
     
     
 def get_week_dates(start_date):
