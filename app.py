@@ -29,12 +29,13 @@ def get_week_dates(start_date):
     
     # 週の日付を取得
     for i in range(7):
-        # 月が切り替わる場合は日付の前に月を表示
-        if date.day == 1 and i > 0:
-            week_dates.append(f'{date.month}/{date.day}')
         
-        # 日付と曜日を追加
-        week_dates.append(f'{date.day}({weekdays[date.weekday()]})')
+        if date.day == 1:
+            # 月が切り替わる場合は日付の前に月を表示
+            week_dates.append(f'{date.month}/{date.day}({weekdays[date.weekday()]})')
+        else :
+            # 日付と曜日を追加
+            week_dates.append(f'{date.day}({weekdays[date.weekday()]})')
         
         # 日付を1日進める
         date += datetime.timedelta(days=1)
